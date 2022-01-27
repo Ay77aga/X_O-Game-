@@ -19,23 +19,31 @@ body {
   width: 300px;
   margin: auto;
   background-color: var(--m-color);
-  padding: 5px 10px;
+  padding: 5px;
   text-align: center;
   font-weight: 900;
   color: #fff;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .status {
   width: fit-content;
-  height: 50px;
+  height: fit-content;
   margin: 10px auto;
 }
-.game{
+
+.game {
   position: relative;
-}
-.container {
   border: 2px solid var(--m-color);
+  overflow: hidden;
+   margin: auto;
+ border-radius: 1rem;
+  padding: 5px;
+  max-width: 500px;
+  height: 344px;
+}
+
+.container {
   font-weight: 900;
   font-size: 75px;
   color: #fff;
@@ -43,16 +51,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
-  overflow: hidden;
-  padding: 5px;
-  max-width: 500px;
-  height: 344px;
-  margin: auto;
-  border-radius: 1rem;
 }
 
 .cell_two,
-.cell_singl{
+.cell_singl {
   border: 2px solid #fff;
   cursor: pointer;
   user-select: none;
@@ -104,9 +106,24 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
   height: 100%;
   transition: .5s;
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+  display: inline-flex;
+  color: lime;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 5px;
+  width: fit-content;
+  box-shadow: 0 0 18px 10px #000 inset;
+  animation: sc 1s infinite alternate ease-in-out;
+    transform: scale(.8) rotateZ(-5deg)
 }
 
 .roles .btn {
@@ -114,4 +131,11 @@ body {
   font-size: 20px;
   font-weight: 900;
   letter-spacing: 2px;
+  margin: 10px auto;
+}
+
+@keyframes sc {
+  100% {
+    transform: scale(1) rotateZ(5deg)
+  }
 }

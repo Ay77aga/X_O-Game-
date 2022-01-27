@@ -30,7 +30,7 @@ function win_rols(cells) {
   win(cells[0], cells[4], cells[8]);
   win(cells[2], cells[4], cells[6]);
 }
-let w = true;
+
 function win(cell1, cell2, cell3) {
   if (cell1.textContent == cell2.textContent && cell1.textContent == cell3.textContent && cell3.textContent !== '') {
     cell1.style.background = 'var(--m-color)';
@@ -38,7 +38,5 @@ function win(cell1, cell2, cell3) {
     cell3.style.background = 'var(--m-color)';
     document.querySelector('.return h1 span').textContent = `[ ${cell2.textContent} ]`;
     document.querySelector('.return').style.transform = 'scale(1)';
-  w = false;
-    
   }
 }
