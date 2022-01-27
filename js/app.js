@@ -16,7 +16,6 @@ btns.forEach((btn) => {
       two_player();
       roles.style.transform = 'scale(0)';
     } else if (btn.classList.contains('singl')) {
-      w = true;
       singl_payer();
       roles.style.transform = 'scale(0)';
     }

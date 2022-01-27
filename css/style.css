@@ -4,7 +4,7 @@
 }
 
 :root {
-  --m-color: #8319F4;
+  --m-color: #5300FD85;
 }
 
 body {
@@ -41,6 +41,7 @@ body {
   padding: 5px;
   max-width: 500px;
   height: 344px;
+  background-color: #5300FD85;
 }
 
 .container {
@@ -60,6 +61,8 @@ body {
   user-select: none;
   border-radius: 1rem;
   height: 107px;
+  background-color: #5300FD85;
+  box-shadow: 0 0 15px 15px #242424C9 inset;
 }
 
 .return {
