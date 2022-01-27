@@ -1,5 +1,7 @@
 const singl_payer = () => {
   render('cell_singl');
+  player = 'X';
+  status(`Player: ${player}`);
   let cells = document.querySelectorAll('.cell_singl');
   cells.forEach((cell) => {
     cell.addEventListener('click', function() {
