@@ -4,12 +4,14 @@
 }
 
 :root {
-  --m-color: #5300FD85;
+  --m-color: #057BAEE0;
 }
 
 body {
   font-family: my_font;
-  background: #293D58;
+  background: url(../imgs/bg.jpg) no-repeat center;
+  background-size: cover;
+  height: 90vh;
 }
 
 .title,
@@ -36,12 +38,11 @@ body {
   position: relative;
   border: 2px solid var(--m-color);
   overflow: hidden;
-   margin: auto;
- border-radius: 1rem;
+  margin: auto;
+  border-radius: 1rem;
   padding: 5px;
   max-width: 500px;
   height: 344px;
-  background-color: #5300FD85;
 }
 
 .container {
@@ -61,8 +62,11 @@ body {
   user-select: none;
   border-radius: 1rem;
   height: 107px;
-  background-color: #5300FD85;
-  box-shadow: 0 0 15px 15px #242424C9 inset;
+  background-color: rgba(0, 0, 0, .8);
+  font-family: Tahoma;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .return {
@@ -126,7 +130,7 @@ a {
   width: fit-content;
   box-shadow: 0 0 18px 10px #000 inset;
   animation: sc 1s infinite alternate ease-in-out;
-    transform: scale(.8) rotateZ(-5deg)
+  transform: scale(.8) rotateZ(-5deg)
 }
 
 .roles .btn {
