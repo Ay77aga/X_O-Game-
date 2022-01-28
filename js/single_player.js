@@ -9,12 +9,14 @@ const singl_payer = () => {
       if (cell.textContent == '') {
         this.textContent = player;
         audio.play();
+        status(`Player: ${player}`);
+        win_rols(cells);
+        if (!done) {
+          robot_play(cells);
+          win_rols(cells);
+        }
+        done = false;
       }
-      status(`Player: ${player}`);
-      win_rols(cells);
-      if (!done)
-        robot_play(cells);
-      done = false;
     });
   });
   restart(cells);
@@ -26,6 +28,6 @@ function robot_play(cells) {
     cell.textContent == '' ? empty.push(cell) : '';
   });
   if (empty.length > 0) {
-    empty[Math.floor(Math.random() * empty.length)].textContent = 'O'
+    empty[Math.floor(Math.random() * empty.length)].textContent = 'O';
   }
 }

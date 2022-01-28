@@ -1,7 +1,7 @@
 let status = (text) => document.querySelector('.status').textContent = text;
 let player = 'X';
 let audio = document.createElement('audio');
-// audio.src = '../audio/click.mp3';
+audio.src = '../audio/click.mp3';
 let btns = document.querySelectorAll('.roles button');
 let roles = document.querySelector('.roles');
 let container = document.querySelector('.container');
@@ -30,7 +30,7 @@ function restart(cells) {
   document.querySelector('.restart').addEventListener('click', () => {
     cells.forEach((cell) => {
       cell.textContent = '';
-      cell.style.background = 'transparent';
+      cell.style.background = 'rgba(0, 0, 0, .7;';
     });
     status('Choose Game Roles');
     document.querySelector('.return').style = 'transform scale(0)';
