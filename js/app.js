@@ -1,11 +1,11 @@
 let status = (text) => document.querySelector('.status').textContent = text;
 let player = 'X';
 let audio = document.createElement('audio');
-audio.src = '../audio/click.mp3';
+// audio.src = '../audio/click.mp3';
 let btns = document.querySelectorAll('.roles button');
 let roles = document.querySelector('.roles');
 let container = document.querySelector('.container');
-
+let done = false;
 // ########################################
 
 status('Choose Game Roles');
@@ -71,5 +71,6 @@ function win(cell1, cell2, cell3) {
     cell3.style.background = 'var(--m-color)';
     document.querySelector('.return h1 span').textContent = `[ ${cell2.textContent} ]`;
     document.querySelector('.return').style.transform = 'scale(1)';
+ done = true;
   }
 }

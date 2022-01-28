@@ -8,11 +8,13 @@ const singl_payer = () => {
     cell.addEventListener('click', function() {
       if (cell.textContent == '') {
         this.textContent = player;
-        robot_play(cells);
         audio.play();
       }
       status(`Player: ${player}`);
       win_rols(cells);
+      if (!done)
+        robot_play(cells);
+      done = false;
     });
   });
   restart(cells);
