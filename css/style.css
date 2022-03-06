@@ -96,7 +96,7 @@ body {
   transition: .3s;
 }
 
-.return span {
+.return .r {
   display: inline-block;
   width: fit-content;
   color: lime;
@@ -154,7 +154,6 @@ a {
   letter-spacing: 2px;
   margin: 10px auto;
 }
-
 @keyframes sc {
   100% {
     transform: scale(1) rotateZ(5deg)

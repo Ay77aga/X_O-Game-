@@ -69,8 +69,23 @@ function win(cell1, cell2, cell3) {
     cell1.style.background = 'var(--m-color)';
     cell2.style.background = 'var(--m-color)';
     cell3.style.background = 'var(--m-color)';
-    document.querySelector('.return h1 span').textContent = `[ ${cell2.textContent} ]`;
+    document.querySelector('.return h1 .text').textContent = 'Winner Is';
+    document.querySelector('.return h1 .r').textContent = `[ ${cell2.textContent} ]`;
     document.querySelector('.return').style.transform = 'scale(1)';
- done = true;
+    done = true;
+  }
+}
+
+// Drow
+function drow(cells) {
+  let empty = [];
+  cells.forEach((cell) => {
+    cell.textContent == '' ? empty.push(cell) : '';
+  });
+  if (empty.length == 0) {
+    document.querySelector('.return h1 .text').textContent = 'Don\'t Have a Winner';
+    document.querySelector('.return h1 .r').textContent = `[Drow ]`;
+    document.querySelector('.return').style.transform = 'scale(1)';
+    q
   }
 }

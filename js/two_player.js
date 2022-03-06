@@ -14,6 +14,7 @@ const two_player = () => {
       audio.play();
       status(`Player: ${player}`);
       win_rols(cells);
+      drow(cells)
     });
   });
   restart(cells);

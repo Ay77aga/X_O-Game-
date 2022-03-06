@@ -14,6 +14,7 @@ const singl_payer = () => {
         if (!done) {
           robot_play(cells);
           win_rols(cells);
+          drow(cells)
         }
         done = false;
       }
@@ -30,4 +31,5 @@ function robot_play(cells) {
   if (empty.length > 0) {
     empty[Math.floor(Math.random() * empty.length)].textContent = 'O';
   }
+
 }
